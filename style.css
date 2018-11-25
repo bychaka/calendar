@@ -1,0 +1,142 @@
+@import url(reset.css);
+
+.body{
+    display: flex;
+    height: 100vh;
+}
+
+.calendar-container{
+    margin: auto;
+    padding: 0;
+    /* width: 523px; */
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 17px;
+    background-color: #131c27;
+    color: #fff;
+}
+
+.calendar-dates-container{
+    display: flex;
+    flex-direction: column;
+    padding: 7px 25px;
+}
+
+.calendar-dates{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 400px;
+}
+
+.calendar-week-day{
+    display: flex;
+    flex-direction: row;
+}
+
+.day, .week-day{
+    width: 48px;
+    line-height: 36px;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 4px;
+    cursor: default;
+    border: 3px solid #131c27;
+    outline: 3px solid #131c27;
+    transition: 0.2s;
+}
+
+.day:hover{
+    background-color: #3e3e3e;
+    border-color: #3e3e3e;
+    outline-color: #89898a; 
+}
+
+.disable-date{
+    color: #707070;
+}
+
+.active-date {
+    background-color: #0078d7;
+    border-color: #000;
+    outline-color: #0078d7;     
+    /* box-shadow:
+    0 0 0 3px #000000,
+    0 0 0 6px #0078d7; */
+}
+
+.selected-day{
+    outline-color: #0078d7;   
+}
+
+.calendar-header{
+    padding: 20px 52px 12px 43px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.up-month, .down-month{
+    height: 13px;
+    width: 13px;
+    text-decoration: none;
+    cursor: pointer;
+    display: block;
+}
+
+.down-month{
+    transform: translateY(-5px) rotate(45deg); 
+    border-bottom: 2px solid #fff;
+    border-right: 2px solid #fff;
+}
+
+.up-month{
+    transform: translateY(5px) rotate(45deg); 
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    margin-right: 41px;
+}
+
+.calendar-controls{
+    display: flex;
+    flex-direction: row;
+}
+
+.head{
+    margin: 0;
+    padding: 30px 20px 25px 41px;
+    font-size: 50px;
+    border-bottom: 1px solid #434952;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.time-now{
+    font-weight: 300;
+    margin-bottom: 17px;
+}
+
+.date-now{
+    margin: 0;
+    text-decoration: none;
+    color: #429ce3;
+    font-size: 21px;
+    cursor: pointer;
+}
+
+.calendar-footer{
+    text-align: left;
+    margin: 0;
+    font-size: 21px;
+    padding: 25px 38px 19px 43px;
+    border-top: 1px solid #434952;
+    display: flex;
+    justify-content: space-between;
+}
+
+.event-action{
+    font-size: 25px;
+    font-weight: 300;
+    cursor: pointer;
+}
